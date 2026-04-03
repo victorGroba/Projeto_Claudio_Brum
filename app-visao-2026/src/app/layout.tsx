@@ -24,6 +24,34 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: 'Professor Claudio Brum | Preparatório Militar de Elite',
   description: 'Preparação definitiva para ESA, EEAR, EPCAR, Colégio Naval e concursos militares de Ensino Médio. Método comprovado com +500 aprovados.',
+  metadataBase: new URL('https://professorclaudiobrum.com.br'),
+  icons: {
+    icon: '/assets/images/favicon.ico',
+    shortcut: '/assets/images/favicon.ico',
+    apple: '/assets/images/favicon.ico',
+  },
+  openGraph: {
+    title: 'Professor Claudio Brum | Preparatório Militar de Elite',
+    description: 'Preparação definitiva para ESA, EEAR, EPCAR, Colégio Naval e concursos militares de Ensino Médio. Método comprovado com +500 aprovados.',
+    url: 'https://professorclaudiobrum.com.br',
+    siteName: 'Professor Claudio Brum',
+    images: [
+      {
+        url: '/assets/images/banner_site.png',
+        width: 1200,
+        height: 630,
+        alt: 'Professor Claudio Brum - Preparatório Militar de Elite',
+      },
+    ],
+    locale: 'pt_BR',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Professor Claudio Brum | Preparatório Militar de Elite',
+    description: 'Preparação definitiva para ESA, EEAR, EPCAR, Colégio Naval e concursos militares de Ensino Médio.',
+    images: ['/assets/images/banner_site.png'],
+  },
 };
 
 export default function RootLayout({
