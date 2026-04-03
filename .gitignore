@@ -1,0 +1,45 @@
+# ============================================
+# IGNORAR TUDO E INCLUIR APENAS app-visao-2026
+# ============================================
+
+# Ignorar tudo por padrão
+/*
+
+# Manter apenas o projeto principal
+!/app-visao-2026/
+
+# ─── Dentro do app-visao-2026, ignorar: ───
+
+# Dependencies
+app-visao-2026/node_modules/
+app-visao-2026/.pnp
+app-visao-2026/.pnp.*
+app-visao-2026/.yarn/*
+
+# Next.js build
+app-visao-2026/.next/
+app-visao-2026/out/
+app-visao-2026/build/
+
+# Debug logs
+app-visao-2026/npm-debug.log*
+app-visao-2026/yarn-debug.log*
+app-visao-2026/yarn-error.log*
+app-visao-2026/.pnpm-debug.log*
+
+# Env files
+app-visao-2026/.env*
+
+# TypeScript cache
+app-visao-2026/*.tsbuildinfo
+app-visao-2026/next-env.d.ts
+
+# Vercel
+app-visao-2026/.vercel
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Manter o .gitignore raiz
+!.gitignore
