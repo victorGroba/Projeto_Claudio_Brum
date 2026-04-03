@@ -1,0 +1,51 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: app-visao-2026
+    restart: unless-stopped
+    ports:
+      - "3003:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_TELEMETRY_DISABLED=1
+    networks:
+      - app-network
+    # healthcheck:
+    #   test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000"]
+    #   interval: 30s
+    #   timeout: 10s
+    #   retries: 3
+    #   start_period: 40s
+
+  # ─── Descomente quando for adicionar banco de dados ───
+  # db:
+  #   image: postgres:16-alpine
+  #   container_name: app-visao-db
+  #   restart: unless-stopped
+  #   environment:
+  #     POSTGRES_USER: visao_user
+  #     POSTGRES_PASSWORD: ${DB_PASSWORD:-changeme}
+  #     POSTGRES_DB: visao_db
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #   networks:
+  #     - app-network
+  #   ports:
+  #     - "5433:5432"
+
+  # ─── Descomente quando precisar de cache/sessões ───
+  # redis:
+  #   image: redis:7-alpine
+  #   container_name: app-visao-redis
+  #   restart: unless-stopped
+  #   networks:
+  #     - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+# volumes:
+#   postgres_data:

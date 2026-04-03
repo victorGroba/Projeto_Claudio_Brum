@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@theme {
+
+  --color-primary: #C9A84C;
+  --color-secondary: #1B2A4A;
+  --color-accent: #8B0000;
+  --color-background-light: #f0f2f5;
+  --color-background-dark: #0A0F1C;
+  --color-surface-dark: #111827;
+  --color-surface-light: #ffffff;
+  --color-gold-light: #E8D48B;
+  --color-military-green: #2D4A22;
+  --color-navy-blue: #003366;
+  --color-airforce-blue: #4A6FA5;
+
+  --font-display: var(--font-space-grotesk),
+    "Space Grotesk",
+    sans-serif;
+  --font-serif: var(--font-playfair-display),
+    "Playfair Display",
+    serif;
+  --font-sans: var(--font-montserrat),
+    "Montserrat",
+    sans-serif;
+
+  --background-image-hero-gradient: linear-gradient(to right bottom, #0A0F1C, #0d1326, #111827);
+  --background-image-card-gradient: linear-gradient(135deg, rgba(201, 168, 76, 0.08) 0%, rgba(27, 42, 74, 0.05) 100%);
+  --background-image-text-gradient: linear-gradient(90deg, #C9A84C 0%, #E8D48B 100%);
+}
+
+@layer utilities {
+  .glow-gold {
+    box-shadow: 0 0 20px rgba(201, 168, 76, 0.2);
+  }
+
+  .glow-text {
+    text-shadow: 0 0 20px rgba(201, 168, 76, 0.3);
+  }
+
+  .glow-box {
+    box-shadow: 0 0 30px rgba(201, 168, 76, 0.15);
+  }
+
+  .clip-path-slant {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
+  .timeline-line::before {
+    content: '';
+    position: absolute;
+    left: 19px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #C9A84C 0%, rgba(201, 168, 76, 0.1) 100%);
+  }
+}
+
+body {
+  min-height: max(884px, 100dvh);
+}
+
+/* Infinite marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 40s linear infinite;
+}
+
+.animate-marquee:hover,
+.animate-marquee-reverse:hover {
+  animation-play-state: paused;
+}
+
+/* Hide scrollbar utility */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

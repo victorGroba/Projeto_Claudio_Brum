@@ -1,0 +1,36 @@
+# Dependencies
+node_modules
+npm-debug.log*
+
+# Next.js build output
+.next
+out
+
+# Git
+.git
+.gitignore
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docs & scripts (not needed in container)
+*.md
+convert_pages.py
+replace_dashes.js
+prompt_claude.md
+next-prompt.md
+stitch.json
+
+# Env files
+.env*
+
+# Misc
+.vercel
+*.tsbuildinfo
