@@ -27,7 +27,7 @@ const BENEFITS = [
     },
 ];
 
-const SUBJECTS = ['Matemática', 'Física', 'Química', 'Português', 'Redação', 'Inglês'];
+const SUBJECTS = ['Matemática', 'Física', 'Química', 'Português', 'Redação', 'Inglês', 'História'];
 
 const container = {
     hidden: {},

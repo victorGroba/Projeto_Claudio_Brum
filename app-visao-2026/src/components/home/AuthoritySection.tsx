@@ -53,9 +53,9 @@ export default function AuthoritySection() {
                     >
                         <div className="relative aspect-[4/5] rounded-3xl overflow-hidden bg-surface-dark border border-primary/10">
                             <img
-                                src="/assets/images/banner-mobile.png"
+                                src="/assets/images/banner_site.png"
                                 alt="Professor Cláudio Brum"
-                                className="w-full h-full object-cover object-top"
+                                className="w-full h-full object-cover object-[80%_20%]"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent" />
 
@@ -101,11 +101,11 @@ export default function AuthoritySection() {
                         </h2>
 
                         <p className="text-slate-400 text-lg leading-relaxed mb-6">
-                            Com mais de <strong className="text-white">20 anos de experiência</strong> na preparação para concursos e no ensino da matemática, Cláudio Brum é graduado em Física e Matemática e especialista em Psicopedagogia. Foi o idealizador do <strong className="text-white">Clube da Matemática</strong>, projeto focado em descomplicar o aprendizado e destravar a mente dos alunos para as provas mais exigentes.
+                            Com mais de <strong className="text-white">20 anos de experiência</strong> na preparação para concursos e no ensino de Matemática, Cláudio Brum é graduado em Física e Matemática e especialista em Psicopedagogia. Foi o idealizador do <strong className="text-white">Clube da Matemática</strong>, um projeto focado em descomplicar o aprendizado e destravar a mente dos alunos para as provas mais exigentes.
                         </p>
 
                         <p className="text-slate-400 text-lg leading-relaxed mb-10">
-                            Um pilar fundamental do seu método vem da sua experiência como <strong className="text-white">saxofonista</strong>. Matemática e música são linguagens baseadas em <strong className="text-white">padrões</strong> e <strong className="text-white">disciplina</strong>. Ao aplicar o rigor do treino musical nos estudos, com repetição estratégica, correção de erros e refinamento diário, ele ensina o aluno a resolver questões de forma quase automática. O resultado é um método onde a aprovação nunca é acaso, mas sim consequência de um processo muito bem estruturado.
+                            Um pilar fundamental do seu método vem de sua experiência como <strong className="text-white">saxofonista</strong>. Matemática e música são linguagens baseadas em <strong className="text-white">padrões</strong> e <strong className="text-white">disciplina</strong>. Ao aplicar o rigor do treino musical aos estudos, com repetição estratégica, correção de erros e refinamento diário, ele ensina o aluno a resolver questões de forma quase automática. O resultado é um método em que a aprovação não é acaso, mas consequência de um processo bem estruturado.
                         </p>
 
                         {/* Credentials Grid */}

@@ -46,7 +46,7 @@ export default function HeroSection() {
                     <img
                         src="/assets/images/banner-mobile.png"
                         alt="Professor Claudio Brum"
-                        className="w-full h-full object-cover object-center"
+                        className="w-full h-full object-cover object-[85%_top]"
                     />
                 </div>
             </div>

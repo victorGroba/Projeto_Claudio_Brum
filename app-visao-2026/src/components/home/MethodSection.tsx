@@ -8,36 +8,36 @@ import { SpotlightCard } from '@/components/ui/SpotlightCard';
 const PROBLEMS = [
     {
         icon: Users,
-        title: 'Cursinho genérico',
-        desc: 'Mistura tudo: ENEM, militar, técnica. Você estuda conteúdo que NÃO cai na sua prova e perde tempo precioso.',
+        title: "A Ilusão da 'Fábrica de Alunos'",
+        desc: "Você entra em cursinhos abarrotados onde a aula segue no piloto automático. Você não tira dúvidas e acaba sendo só mais um 'boleto' no fim do mês.",
     },
     {
         icon: BarChart3,
-        title: 'Sem foco na sua meta',
-        desc: 'Cada concurso e cada escola tem banca, perfil e conteúdo programático diferentes. Estudar igual é garantia de frustração.',
+        title: "O Veneno do Material Genérico",
+        desc: "Misturam alunos de provas distintas na mesma sala com a mesma apostila. O resultado? Você estuda 40% de matérias que NUNCA vão cair no seu edital.",
     },
     {
         icon: TrendingUp,
-        title: 'Sem diagnóstico real',
-        desc: 'Meses de estudo sem saber se está evoluindo. Sem simulados específicos, você não mede o que importa.',
+        title: "Falsa Sensação de Progresso",
+        desc: "Meses de suor sem nenhum raio-x do seu aprendizado. Sem medir seus acertos ao longo do ano, o dia da sua prova vira uma verdadeira roleta-russa.",
     },
 ];
 
 const SOLUTIONS = [
     {
         icon: Crosshair,
-        title: 'Preparação por Objetivo',
-        desc: 'ESA, CEFET, Pedro II: cada meta tem um plano de estudos próprio, alinhado com a banca e o perfil da prova.',
+        title: "A Precisão do 'Engenheiro de Prova'",
+        desc: "Aulas cirúrgicas e no alvo certo. Nós destrinchamos a mente da sua banca e focamos a energia EXCLUSIVAMENTE naquilo que garante a sua vaga.",
     },
     {
         icon: Brain,
-        title: 'Diagnóstico + Acompanhamento',
-        desc: 'Mapeamos suas lacunas desde o primeiro dia. Simulados regulares, correção detalhada e ajustes em tempo real.',
+        title: "Radiografia Contínua e Tática",
+        desc: "Medimos a sua nota passo a passo com simulados e métricas de elite. Você não 'torce' para passar, você chega sabendo o gabarito de antemão.",
     },
     {
         icon: Zap,
-        title: 'Resultado Mensurável',
-        desc: 'Relatórios de evolução, ranking e um cronograma alinhado para escalar sua nota mês a mês.',
+        title: "Acompanhamento Corpo a Corpo",
+        desc: "Mesmo em turmas, trabalhamos com planejamento quase individualizado. Tratamos cada aluno como o dono da nossa próxima placa oficial de aprovação.",
     },
 ];
 
@@ -70,7 +70,7 @@ export default function MethodSection() {
                     >
                         <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-primary/10 border border-primary/30 text-primary text-sm font-bold uppercase tracking-[0.2em] mb-8">
                             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                            Por que o Método funciona
+                            A VERDADE DOS BASTIDORES
                         </span>
 
                         <div className="flex items-center justify-center gap-4 mb-8">
@@ -80,9 +80,9 @@ export default function MethodSection() {
                         </div>
 
                         <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.05] max-w-4xl mx-auto mb-6">
-                            O cursinho genérico te trata como mais um.{' '}
+                            Por que você está <span className="text-red-500">perdendo tempo</span>?{' '}
                             <br className="hidden sm:block" />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-yellow-400 to-primary">Aqui, você é o plano estratégico.</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-yellow-400 to-primary">Chega de ser tratado como mais um.</span>
                         </h2>
                     </motion.div>
                 </div>

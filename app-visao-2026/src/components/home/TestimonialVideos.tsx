@@ -7,33 +7,65 @@ import { useState } from 'react';
 const TESTIMONIALS = [
     {
         id: "1",
-        name: "Indicação Autoridade Militar",
-        role: "Oficial",
-        quote: "O trabalho do Professor Claudio Brum aprova dezenas de candidatos anualmente.",
+        name: "Pimentel",
+        role: "Capitão de Corveta",
+        quote: "Indica o curso do Professor Cláudio Brum! Agradecemos imensamente a confiança em nossa metodologia e no trabalho desenvolvido por toda a equipe.",
+        youtubeId: "1hH0IA-QP5U",
+        thumbnail: "https://img.youtube.com/vi/1hH0IA-QP5U/0.jpg"
+    },
+    {
+        id: "2",
+        name: "Sérgio",
+        role: "Oficial Militar",
+        quote: "Quem entende de disciplina e resultado indica! Recomenda o Curso Professor Cláudio Brum para você que sonha com a aprovação em um cargo público.",
+        youtubeId: "L78mtIihQG8",
+        thumbnail: "https://img.youtube.com/vi/L78mtIihQG8/0.jpg"
+    },
+    {
+        id: "3",
+        name: "Josh Duart",
+        role: "Aluno Pelo Mundo",
+        quote: "Estudando diretamente da gringa! É muito gratificante ver que nosso esforço ultrapassa fronteiras e inspira alunos em diferentes lugares pelo mundo inteiro.",
+        youtubeId: "m7hhFKRiNw4",
+        thumbnail: "https://img.youtube.com/vi/m7hhFKRiNw4/0.jpg"
+    },
+    {
+        id: "4",
+        name: "Márcio Borges",
+        role: "Suboficial Fuzileiro Naval",
+        quote: "Confiou no Curso para a preparação de sua filha. Receber a confiança de uma família que vive a disciplina das Forças Armadas é motivo de grande orgulho.",
+        youtubeId: "Q2x7VAEtyLg",
+        thumbnail: "https://img.youtube.com/vi/Q2x7VAEtyLg/0.jpg"
+    },
+    {
+        id: "5",
+        name: "Jhony",
+        role: "Sargento",
+        quote: "Ex-aluno que hoje atua como Sargento! Recomenda com enorme entusiasmo o curso e a metodologia do Professor Cláudio Brum.",
         youtubeId: "Dv9OMjt470U",
         thumbnail: "https://i.ytimg.com/vi/Dv9OMjt470U/hqdefault.jpg"
     },
     {
-        id: "2",
-        name: "Indicação de Excelência",
-        role: "Aluno Aprovado",
-        quote: "O método de repetição estruturada foi fundamental para chegar ao concurso.",
+        id: "6",
+        name: "Welington Borges",
+        role: "Empresário e Servidor Público",
+        quote: "Empresário e funcionário público atestando a excelência do curso para quem busca alcançar resultados de verdade na aprovação.",
         youtubeId: "VE4Uo98TBew",
         thumbnail: "https://i.ytimg.com/vi/VE4Uo98TBew/hqdefault.jpg"
     },
     {
-        id: "3",
-        name: "Indicação Estratégica",
-        role: "Profissional",
-        quote: "Seguimos a grade programática e garantimos evolução desde a primeira aula.",
+        id: "7",
+        name: "Josias Castro",
+        role: "Aluno Pelo Mundo",
+        quote: "Diretamente da ensolarada Flórida, nos Estados Unidos! Um reconhecimento incrível que certifica que o método funciona sem barreiras.",
         youtubeId: "Z6nBsbhNRpY",
         thumbnail: "https://i.ytimg.com/vi/Z6nBsbhNRpY/hqdefault.jpg"
     },
     {
-        id: "4",
-        name: "Indicação Padrão MB",
-        role: "Coordenação",
-        quote: "Material direto ao ponto. Exatamente o que o aluno necessita e mais cai em prova.",
+        id: "8",
+        name: "Márcio",
+        role: "Policial do BOPE",
+        quote: "Recomendação de quem vive a elite diariamente! O Policial Márcio, do BOPE, atesta a alta performance e a disciplina do método.",
         youtubeId: "n7foTNmJ-tQ",
         thumbnail: "https://i.ytimg.com/vi/n7foTNmJ-tQ/hqdefault.jpg"
     }
@@ -85,8 +117,15 @@ export function TestimonialVideos() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="group flex flex-col items-center bg-white/5 border border-primary/10 rounded-3xl overflow-hidden hover:border-primary/30 transition-colors backdrop-blur-xl"
+                            className="relative group flex flex-col items-center bg-white/5 border border-primary/10 rounded-3xl overflow-hidden hover:border-primary/30 transition-colors backdrop-blur-xl"
                         >
+                            {testimonial.role === "Aluno Pelo Mundo" && (
+                                <div className="absolute top-3 right-3 bg-gradient-to-r from-primary to-yellow-500 text-black text-[10px] font-black tracking-wide uppercase px-3 py-1.5 rounded-full shadow-[0_0_15px_rgba(201,168,76,0.3)] z-20 flex items-center gap-1.5 border border-white/20">
+                                    <span className="material-symbols-outlined text-[14px] font-bold">public</span>
+                                    <span>Internacional</span>
+                                </div>
+                            )}
+
                             <div className="relative w-full aspect-video bg-black flex items-center justify-center overflow-hidden">
                                 <img
                                     src={testimonial.thumbnail}

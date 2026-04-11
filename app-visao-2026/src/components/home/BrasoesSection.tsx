@@ -1,13 +1,13 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Shield, Anchor, Plane, GraduationCap, TrendingUp, FileText } from 'lucide-react';
+import { Shield, Anchor, Plane, GraduationCap, TrendingUp, FileText, Siren, Flame, ShieldCheck } from 'lucide-react';
 
 interface Concurso {
     nome: string;
     vagas: string;
     detalhe: string;
-    status: 'Edital Aberto' | 'Previsto' | 'Inscrições';
+    status: 'Edital Aberto' | 'Previsto' | 'Inscrições' | 'Autorizado';
 }
 
 interface Categoria {
@@ -59,6 +59,42 @@ const CATEGORIAS: Categoria[] = [
         ],
     },
     {
+        nome: 'Polícia Militar do RJ',
+        icon: Siren,
+        cor: 'text-red-400',
+        corBg: 'bg-red-500/10',
+        corBorder: 'border-red-500/20',
+        logoPlaceholder: '/assets/images/brasoes/policia.jpg',
+        concursos: [
+            { nome: 'Soldado PM | PMERJ', vagas: '2.000 vagas previstas', detalhe: 'R$ 5.233 após formação', status: 'Autorizado' },
+            { nome: 'Curso de Formação', vagas: 'Ensino Médio completo', detalhe: 'R$ 2.956 (aluno)', status: 'Previsto' },
+        ],
+    },
+    {
+        nome: 'Corpo de Bombeiros Militar RJ',
+        icon: Flame,
+        cor: 'text-orange-400',
+        corBg: 'bg-orange-500/10',
+        corBorder: 'border-orange-500/20',
+        logoPlaceholder: '/assets/images/brasoes/bombeiros.jpeg',
+        concursos: [
+            { nome: 'Soldado BM | CBMERJ', vagas: 'Busca e Salvamento', detalhe: 'R$ 5.233 após formação', status: 'Previsto' },
+            { nome: 'SMTV | Temporário Voluntário', vagas: '1.500 vagas', detalhe: 'R$ 2.956 (aluno)', status: 'Edital Aberto' },
+        ],
+    },
+    {
+        nome: 'Guarda Municipal do RJ',
+        icon: ShieldCheck,
+        cor: 'text-cyan-400',
+        corBg: 'bg-cyan-500/10',
+        corBorder: 'border-cyan-500/20',
+        logoPlaceholder: '/assets/images/brasoes/Guarda_municipal.png',
+        concursos: [
+            { nome: 'Guarda Municipal | GM-Rio', vagas: 'A ser definido', detalhe: 'Ensino Médio completo', status: 'Previsto' },
+            { nome: 'Força Municipal (Elite)', vagas: '600 vagas (interno)', detalhe: 'Divisão armada de elite', status: 'Inscrições' },
+        ],
+    },
+    {
         nome: 'Escolas Técnicas e Federais',
         icon: GraduationCap,
         cor: 'text-amber-400',
@@ -75,9 +111,9 @@ const CATEGORIAS: Categoria[] = [
     {
         nome: 'ENEM | Vestibulares',
         icon: FileText,
-        cor: 'text-orange-400',
-        corBg: 'bg-orange-500/10',
-        corBorder: 'border-orange-500/20',
+        cor: 'text-violet-400',
+        corBg: 'bg-violet-500/10',
+        corBorder: 'border-violet-500/20',
         logoPlaceholder: '/assets/images/logo_instituicoes/iconenem.webp',
         concursos: [
             { nome: 'ENEM', vagas: 'Exame Nacional', detalhe: 'Porta de entrada para universidades', status: 'Previsto' as const },
@@ -132,7 +168,7 @@ export default function BrasoesSection() {
                         transition={{ delay: 0.15 }}
                         className="text-slate-400 text-lg max-w-2xl mx-auto"
                     >
-                        Concursos militares de Ensino Médio e processos seletivos das melhores escolas técnicas e federais do Rio de Janeiro. Veja onde nossos alunos são aprovados.
+                        Concursos militares de Ensino Médio e processos seletivos das melhores escolas técnicas e federais do país. Veja onde nossos alunos são aprovados.
                     </motion.p>
                 </div>
 
@@ -198,6 +234,8 @@ export default function BrasoesSection() {
                                                         ? 'bg-primary text-background-dark'
                                                         : c.status === 'Inscrições'
                                                         ? 'bg-secondary/20 text-secondary border border-secondary/20'
+                                                        : c.status === 'Autorizado'
+                                                        ? 'bg-green-500/20 text-green-400 border border-green-500/20'
                                                         : 'bg-white/10 text-slate-400 border border-white/10'
                                                 }`}>
                                                     {c.status}

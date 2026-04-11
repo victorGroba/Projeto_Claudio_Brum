@@ -7,7 +7,7 @@ const TEAM = [
         name: 'Cláudio Brum',
         role: 'Idealizador e Estrategista',
         desc: 'Graduado em Matemática e Física, pós-graduado em Finanças e especialista em concursos públicos. Empreendedor, saxofonista e a mente estratégica por trás de todo o método.',
-        image: '/assets/images/professores/claudio_com_alunos.jpg',
+        image: '/assets/images/banner-mobile.png',
     },
     {
         name: 'Keit Lima Brum',
@@ -26,6 +26,12 @@ const TEAM = [
         role: 'Língua Portuguesa e Redação',
         desc: 'Focada em destravar a escrita e a interpretação textual, utiliza uma metodologia prática orientada a resultados desde 2022 para dominar as principais competências exigidas do concurseiro.',
         image: '/assets/images/professores/MilenaVasconcelo.jpeg',
+    },
+    {
+        name: 'João Gabriel Andrade Peres',
+        role: 'História',
+        desc: 'Graduando em História, com atuação na área educacional desde 2018. Desenvolve trabalho focado em concursos públicos e reforço escolar. Sua trajetória articula prática educacional, compromisso com a formação crítica e dedicação ao desenvolvimento intelectual dos alunos.',
+        image: '/assets/images/professores/professor-joao.jpeg',
     },
 ];
 
@@ -68,18 +74,18 @@ export default function TeamSection() {
                         </div>
 
                         <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.05] mb-6">
-                            Uma tropa de especialistas pronta para{' '}
+                            Militares, técnicas e federais.{' '}
                             <br className="hidden sm:block" />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-yellow-400 to-primary">alavancar sua nota.</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-yellow-400 to-primary">Nós preparamos para todas.</span>
                         </h2>
 
                         <p className="text-slate-400 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed">
-                            Você não estudará sozinho. Nosso corpo docente compartilha a mesma visão estratégica focada puramente em resultado.
+                            Você não estudará sozinho. Nosso corpo docente compartilha a mesma visão estratégica, totalmente focada em resultados.
                         </p>
                     </motion.div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="flex flex-wrap justify-center gap-6 lg:gap-8">
                     {TEAM.map((member, index) => {
                         // Each card gets a unique entrance animation
                         const entranceVariants = [
@@ -98,7 +104,7 @@ export default function TeamSection() {
                                 viewport={{ once: true, margin: "-50px" }}
                                 transition={{ duration: 0.7, delay: index * 0.15, ease: [0.22, 1, 0.36, 1] }}
                                 whileHover={{ y: -8, transition: { duration: 0.3 } }}
-                                className="relative bg-background-dark/50 border border-white/5 rounded-3xl overflow-hidden group cursor-pointer"
+                                className="w-full sm:w-[calc(50%-12px)] lg:w-[280px] xl:w-[300px] relative bg-background-dark/50 border border-white/5 rounded-3xl overflow-hidden group flex-shrink-0 cursor-default"
                             >
                                 {/* Animated glow border on hover */}
                                 <div className="absolute -inset-[1px] rounded-3xl bg-gradient-to-br from-primary/0 via-primary/0 to-primary/0 group-hover:from-primary/30 group-hover:via-yellow-400/20 group-hover:to-primary/30 transition-all duration-500 -z-10 blur-[2px]" />

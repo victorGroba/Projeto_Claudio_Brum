@@ -273,25 +273,46 @@ export default function PricingTable() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="max-w-2xl mx-auto mb-14 p-6 rounded-2xl bg-surface-dark border border-primary/15"
+                    className="max-w-4xl mx-auto mb-14 p-6 sm:p-8 rounded-3xl bg-surface-dark border border-primary/20 flex flex-col md:flex-row items-center gap-8 shadow-2xl relative overflow-hidden group"
                 >
-                    <div className="flex items-center gap-2 mb-4">
-                        <Gift size={20} className="text-primary" />
-                        <h3 className="text-white font-black text-sm uppercase tracking-wider">Bônus inclusos em todos os planos</h3>
+                    {/* Efeito de luz sutil no fundo */}
+                    <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
+                    
+                    {/* Lado da Imagem */}
+                    <div className="w-full md:w-5/12 flex-shrink-0 relative z-10 flex justify-center">
+                        <img 
+                            src="/assets/images/bonus.png" 
+                            alt="Bônus Inclusos - Professor Claudio Brum" 
+                            className="w-full max-w-[300px] md:max-w-full h-auto object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.6)] transform transition-transform duration-700 group-hover:scale-105"
+                        />
                     </div>
-                    <div className="space-y-3">
-                        {BONUSES.map((bonus) => (
-                            <div key={bonus.name} className="flex items-center justify-between gap-4">
-                                <span className="text-slate-200 text-sm flex items-center gap-2">
-                                    <span className="material-symbols-outlined text-primary text-base flex-shrink-0">check_circle</span>
-                                    {bonus.name}
-                                </span>
-                                <span className="text-slate-400 text-sm line-through whitespace-nowrap">{bonus.value}</span>
+
+                    {/* Lado do Conteúdo */}
+                    <div className="w-full md:w-7/12 flex flex-col justify-center z-10">
+                        <div className="flex items-center gap-3 mb-6">
+                            <div className="p-2.5 bg-primary/10 rounded-xl border border-primary/20">
+                                <Gift size={24} className="text-primary" />
                             </div>
-                        ))}
-                        <div className="pt-3 border-t border-white/5 flex items-center justify-between">
-                            <span className="text-white font-bold text-sm">Valor total dos bônus</span>
-                            <span className="text-primary font-black text-lg">R$ 741 GRÁTIS</span>
+                            <h3 className="text-white font-black text-lg sm:text-xl uppercase tracking-wider [text-shadow:_0_0_15px_rgba(201,168,76,0.3)]">
+                                Bônus Inclusos Hoje
+                            </h3>
+                        </div>
+                        <div className="space-y-4">
+                            {BONUSES.map((bonus) => (
+                                <div key={bonus.name} className="flex items-center justify-between gap-4 border-b border-white/5 pb-3 last:border-0 last:pb-0">
+                                    <span className="text-slate-200 text-sm sm:text-base flex items-start sm:items-center gap-3">
+                                        <span className="material-symbols-outlined text-primary text-[20px] flex-shrink-0">check_circle</span>
+                                        {bonus.name}
+                                    </span>
+                                    <span className="text-slate-500 font-medium text-sm line-through whitespace-nowrap">{bonus.value}</span>
+                                </div>
+                            ))}
+                            <div className="pt-4 mt-2 flex items-center justify-between bg-primary/5 p-4 rounded-xl border border-primary/10">
+                                <span className="text-white font-bold text-sm sm:text-base uppercase tracking-wide">Valor total dos bônus</span>
+                                <div className="text-right flex flex-col">
+                                    <span className="text-primary font-black text-xl sm:text-2xl drop-shadow-[0_0_15px_rgba(201,168,76,0.5)]">R$ 741 GRÁTIS</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </motion.div>
